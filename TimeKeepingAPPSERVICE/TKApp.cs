@@ -19,12 +19,12 @@ namespace TimeKeeping.AppService
             return _repo.CallByID(id);
         }
 
-        public void PunchIn(Staffs emp, int type)
+        public void PunchIn(Staffs emp, string type)
         {
             var newLog = new hoursLog
             {
                 namesOfEmp = emp.empList,
-                ClockINClockOUT = (type == 1) ? "IN" : "OUT",
+                ClockINClockOUT = (type == "1") ? "IN" : "OUT",
                 Timestamp = DateTime.Now.ToString("HH:mm")
             };
             _repo.AddLog(newLog);
@@ -36,7 +36,7 @@ namespace TimeKeeping.AppService
             var formatted = new List<string>();
             foreach (var log in rawLogs)
             {
-                formatted.Add($"{log.namesOfEmp} - CLOCKED IN {log.ClockINClockOUT} at {log.Timestamp}");
+                formatted.Add($"{log.namesOfEmp} - CLOCKED {log.ClockINClockOUT} at {log.Timestamp}");
             }
             return formatted;
         }

@@ -20,21 +20,25 @@ namespace TimeKeeping
                 if (emp == null)
                 {
                     Console.WriteLine("Access Denied: I.D entered is not detected in system.");
+                    Console.WriteLine("Restarting Login System...");
                     continue;
                 }
 
                 Console.WriteLine($"Welcome {emp.empList}!");
                 Console.WriteLine($"Your Assigned Hours: {emp.assignedHours}!");
                 Console.WriteLine("Select Action: [1] In [2] Out [3] Exit");
-                int choice = Console.Read();
+                var choice = Console.ReadLine();
 
-                if (choice == 3)
+                if (choice == "1" || choice == "2")
+                {
+                    service.PunchIn(emp, choice);
+                    Console.WriteLine("\n--- Current Day Employee Logs ---");
+                    service.DisplayLogs().ForEach(Console.WriteLine);
+                    continue;
+                }
+                else if (choice == "3")
                     Console.WriteLine("Exiting System...");
                     break;
-                service.PunchIn(emp, choice);
-
-                Console.WriteLine("\n--- Current Day Employee Logs ---");
-                service.DisplayLogs().ForEach(Console.WriteLine);
             }
         }
     }
