@@ -8,4 +8,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="TimeKeepingAppService\**" />
+    <Compile Remove="TimeKeepingDataService\**" />
+    <Compile Remove="TimeKeepingModels\**" />
+    <EmbeddedResource Remove="TimeKeepingAppService\**" />
+    <EmbeddedResource Remove="TimeKeepingDataService\**" />
+    <EmbeddedResource Remove="TimeKeepingModels\**" />
+    <None Remove="TimeKeepingAppService\**" />
+    <None Remove="TimeKeepingDataService\**" />
+    <None Remove="TimeKeepingModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="TimeKeepingAppService\TimeKeepingAppService.csproj" />
+  </ItemGroup>
+
 </Project>
