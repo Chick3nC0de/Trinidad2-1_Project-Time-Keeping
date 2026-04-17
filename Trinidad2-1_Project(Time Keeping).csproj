@@ -24,4 +24,8 @@
     <ProjectReference Include="TimeKeepingAppService\TimeKeepingAppService.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SQL BackUp File\" />
+  </ItemGroup>
+
 </Project>
