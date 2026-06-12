@@ -10,7 +10,7 @@ namespace TimeKeeping.DataService
     public class empRecords
     {
         private readonly TimeKeepingContext _db;
-        private readonly string _jsonPath = "backupLOGS.json";
+        private readonly string _jsonPath = "logs_backup.json";
 
         public empRecords()
         {
@@ -49,11 +49,11 @@ namespace TimeKeeping.DataService
         {
             var initialStaff = new List<Staffs>
             {
-                new Staffs { empID = "2954", empList = "Paul Santa Rosa", assignedHours = "08:00 - 17:00" },
-                new Staffs { empID = "3361", empList = "Inigo Baseleres", assignedHours = "09:00 - 18:00" },
-                new Staffs { empID = "8167", empList = "Matt Bitangcor", assignedHours = "22:00 - 07:00" },
-                new Staffs { empID = "1174", empList = "Alejo Alcantara", assignedHours = "06:00 - 15:00" },
-                new Staffs { empID = "5041", empList = "Neil Cabillo", assignedHours = "07:00 - 16:00" },
+                new Staffs { empID = "2954", fullName = "Paul Santa Rosa", assignedHours = "08:00 - 17:00" },
+                new Staffs { empID = "3361", fullName = "Inigo Baseleres", assignedHours = "09:00 - 18:00" },
+                new Staffs { empID = "8167", fullName = "Matt Bitangcor", assignedHours = "22:00 - 07:00" },
+                new Staffs { empID = "1174", fullName = "Alejo Alcantara", assignedHours = "06:00 - 15:00" },
+                new Staffs { empID = "5041", fullName = "Neil Cabillo", assignedHours = "07:00 - 16:00" },
             };
             _db.Employees.AddRange(initialStaff);
             _db.SaveChanges();

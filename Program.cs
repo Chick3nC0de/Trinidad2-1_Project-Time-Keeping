@@ -24,7 +24,7 @@ namespace TimeKeeping
                     continue;
                 }
 
-                Console.WriteLine($"Welcome {emp.empList}!");
+                Console.WriteLine($"Welcome {emp.fullName}!");
                 Console.WriteLine($"Your Assigned Hours: {emp.assignedHours}!");
                 Console.WriteLine("Select Action: [1] In [2] Out [3] Exit");
                 var choice = Console.ReadLine();

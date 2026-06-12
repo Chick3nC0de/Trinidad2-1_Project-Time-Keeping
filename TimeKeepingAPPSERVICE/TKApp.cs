@@ -23,7 +23,7 @@ namespace TimeKeeping.AppService
         {
             var newLog = new hoursLog
             {
-                namesOfEmp = emp.empList,
+                namesOfEmp = emp.fullName,
                 ClockINClockOUT = (type == "1") ? "IN" : "OUT",
                 Timestamp = DateTime.Now.ToString("HH:mm")
             };

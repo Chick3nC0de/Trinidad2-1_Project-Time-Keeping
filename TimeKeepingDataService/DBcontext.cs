@@ -18,7 +18,7 @@ namespace TimeKeeping.DataService
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Staffs>().HasKey(s => s.empID);
+            modelBuilder.Entity<Staffs>().HasKey(s => s.fullName);
             modelBuilder.Entity<hoursLog>().HasKey(l => l.Timestamp);
         }
     }

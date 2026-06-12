@@ -3,7 +3,7 @@
     public class Staffs
     {
         public string empID { get; set; }
-        public string empList { get; set; }
+        public string fullName { get; set; }
         public string assignedHours { get; set; }
     }
 
